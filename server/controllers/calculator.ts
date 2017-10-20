@@ -18,6 +18,14 @@ router.get('/calc/:a/:b',(req:Request, res:Response) => {
     res.send(`<h1>${a}+${b}= ${sum}</h1>`)
 })
 
+interface IRequest extends Request{
+    a:number, b:number
+}
+
+router.post('/sum',(req: IRequest, res:Response) =>{
+
+    res.send("sum ="+req.a+ req.b)
+})
 
 export const Calculater:Router = router
 
