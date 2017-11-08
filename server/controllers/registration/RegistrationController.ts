@@ -15,6 +15,7 @@ import {Registration} from './Registration'
           console.log("LastName:" + registration.lastName)
           console.log("Age:"+registration.age)
 
+
           res.send("Hello "+registration.firstName)
 
       })

@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "body-parser": "registry:npm/body-parser#1.15.2+20161116154925",
+    "csv-parse": "registry:dt/csv-parse#1.1.0+20170311011611",
     "express": "registry:dt/express#4.0.0+20170118060322",
     "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20170324160323",
     "mime": "registry:dt/mime#0.0.0+20160428043022",
