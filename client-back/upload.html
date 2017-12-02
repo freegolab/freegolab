@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload page</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<h3>File Upload:</h3>
+Select a file to upload: <br />
+<form action = "/upload" method = "POST"
+      enctype= "multipart/form-data">
+    <input type="file" name="file" size="50" />
+    <br />
+    <input type = "submit" value = "Upload File" />
+</form>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+</body>
+
+</html>

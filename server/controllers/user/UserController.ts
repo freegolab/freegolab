@@ -49,17 +49,18 @@ router.post('/',json(),(req:Request & ParsedAsJson, res:Response)=>{
     console.log("Success, added user:"+user)
 })
 
-router.delete('/',json(),(req:Request & ParsedAsJson, res:Response) => {
-    var user:User = new User(<User>req.body);
-
-    console.log("posted data:"+ JSON.stringify(user))
+router.delete('/:id',json(),(req:Request & ParsedAsJson, res:Response) => {
+    //var user:User = new User(<User>req.body);
+    console.log("Deleted called")
+    var id = req.params.id;
+    console.log("ID = "+ id)
     fs.readFile(__dirname+'/../../../server/models/user.json','utf-8',
         function (err,data) {
             console.log(data)
             var jdata = JSON.parse(data)
             console.log("Jdata:"+jdata)
             //jdata.user4 = user;
-            delete jdata['user'+user.id]
+            delete jdata['user'+id]
             res.end(JSON.stringify( jdata))
         })
 
